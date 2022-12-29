@@ -21,6 +21,6 @@ if __name__ == "__main__" :
 
     #excuted function from imported file
     #file_two.function_3()
-    function_4()
+    # function_4()
 else :
     print("File one executed when imported")

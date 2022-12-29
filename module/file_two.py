@@ -10,5 +10,7 @@ def function_4() :
 
 if __name__  == "__main__" : 
     print("File two excuted when ran directly")
+    function_3()
 else :
     print("File two executed when imported")
+    function_4() 
