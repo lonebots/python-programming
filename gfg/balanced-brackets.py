@@ -20,7 +20,7 @@ class solution:
         stck = []
 
         # check pair if only string is even length
-        if len(s) % 2 == 0:
+        if len(s) % 2 == 0:  # check the opposite condition and return 'NO' - help reduce the loc
             for i in s:
                 # left brackets push to stack
                 if i in "([{":
@@ -31,7 +31,8 @@ class solution:
                     return "NO"
 
                 # right bracket with elements in stack
-                elif len(stck) != 0 and i in ")]}" and pair[i] != stck.pop():
+                # elif len(stck) != 0 and i in ")]}" and pair[i] != stck.pop(): -- old
+                elif i in ")]}" and pair[i] != stck.pop():  # -- new
                     return "NO"
 
             # after processing stack empty
