@@ -29,7 +29,11 @@ edge cases :
         time complexity     : O(logn)
         space complexity    : O(1)
 
-     
+    SIMILAR PROBLEMS 
+        1. LOCAL MINIMA
+        2. ?
+
+
 SOLUTION : 
 """
 
