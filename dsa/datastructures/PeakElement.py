@@ -49,9 +49,9 @@ class solution:
                 mid == 0 or arr[mid] > arr[mid - 1]
             ):
                 return arr[mid]
-            if arr[mid - 1] > arr[mid]:
+            if arr[mid - 1] > arr[mid]: # left > mid
                 r = mid - 1
-            elif arr[mid + 1] > arr[mid]:
+            elif arr[mid + 1] > arr[mid]: #  right > mid
                 l = mid + 1
         return -1
 
