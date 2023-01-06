@@ -9,8 +9,7 @@ Good understanding of DSA is required for solving problems as well as becoming a
       - single dimentional - list
       - multi dimentional
 
-
-    - linked list
+    - linked list - Here the data is linked with each other
     - stack
     - queue
 - advanced
