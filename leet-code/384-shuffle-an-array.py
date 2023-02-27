@@ -1,20 +1,18 @@
-class Solution:
+import random
+class Solution(object):
 
-    def __init__(self, nums: List[int]):
+    def __init__(self, nums):
         self.nums = nums
-        
-    def reset(self) -> List[int]:
+
+    def reset(self):
         return self.nums
-        
-    def shuffle(self) -> List[int]:
-        shuffled = self.nums
-        
-        last = len(shuffled)-1 
-        for i in range(len(shuffled)-1,-1,-1) :
-            rand_ = randint(0,last)
-            shuffled[rand_],shuffled[i] = shuffled[i],shuffled[rand_]
-            last -= 1
-        return shuffled
+
+    def shuffle(self):
+        ans = self.nums[:]                     # copy list
+        for i in range(len(ans)-1, 0, -1):     # start from end
+            j = random.randrange(0, i+1)    # generate random index 
+            ans[i], ans[j] = ans[j], ans[i]    # swap
+        return ans
 
 
 # Your Solution object will be instantiated and called as such:
