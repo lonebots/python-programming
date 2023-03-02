@@ -1,3 +1,8 @@
+'''
+1. here left and right pointers are used to solve 
+2. maxL and maxR points to the maximum neighbouring heights of the current block under consideration (based on left or right you consider)
+3. water variable stores the final result which add up the water units while the traversal happens
+'''
 class Solution:
     def trap(self, height: List[int]) -> int:
         if not height : return 0
