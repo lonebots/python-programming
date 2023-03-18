@@ -30,8 +30,8 @@ def check(arr, sum):
 
 
 if __name__ == "__main__":
-    arr = [2, 2, 2, 2]
-    diff = 0
+    arr = [0,0,0,0,0,0,0,0,1]  # failing case ? 
+    diff = 1
 
     sum_ = (sum(arr) + diff)// 2
 
