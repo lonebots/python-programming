@@ -1,17 +1,32 @@
-class Solution:
-    def findCircleNum(self, isConnected: List[List[int]]) -> int:
-        province_count  = 0 
+'''
+There are n cities. Some of them are connected, while some are not. If city a is connected directly with city b, and city b is connected directly with city c, then city a is connected indirectly with city c.
+
+A province is a group of directly or indirectly connected cities and no other cities outside of the group.
+
+You are given an n x n matrix isConnected where isConnected[i][j] = 1 if the ith city and the jth city are directly connected, and isConnected[i][j] = 0 otherwise.
+
+Return the total number of provinces. 
+'''
+
+
+class Solution(object):
+    def findCircleNum(self, isConnected):
+        """
+        :type isConnected: List[List[int]]
+        :rtype: int
+        """
+        provinceCount = 0
         visited = set()
 
-        def dfs (neighbourcities) :
-            for neighbour, connected in enumerate (neighbourcities) :
+        def dfs(neighbourCities) :
+            for neighbour, connected in enumerate(neighbourCities) :
                 if connected and neighbour not in visited :
-                    visited.add(neighbour) 
+                    visited.add(neighbour)
                     dfs(isConnected[neighbour])
 
-        # travel through all the cities and do a dfs 
-        for city, neighbourcities in enumerate(isConnected) :
+        for city, neighbourCities in enumerate(isConnected) :
             if city not in visited :
-                dfs(neighbourcities)
-                province_count += 1  
-        return province_count 
+                dfs(neighbourCities)
+                provinceCount += 1 
+            
+        return provinceCount
