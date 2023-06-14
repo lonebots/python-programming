@@ -1,12 +1,5 @@
-# def concatenate(*args,**kwargs):
-#     for val in args :
-#         print(f"print testing {val}")
-#     for val in kwargs.values():
-#         print(f'hi this is {val}')
-
-
-# concatenate(1,3,5,jishnu="suresh", iss="is", good="good")
-
+# global, local scopes in python 
+# keywords to remember : nonlocal, global
 
 def check_scope():
 
