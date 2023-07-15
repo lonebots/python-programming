@@ -44,3 +44,16 @@ class Solution:
             return dp[count][curr_index]
 
         return dfs(0,k)
+
+# notes on bisect
+
+# bisect_left returns the largest index to insert the element with respect to <
+# bisect_right returns the largest index to insert the element with respect to <=
+# For instance, if your data is [0, 0, 0] and you query for 0:
+
+# bisect_left returns index 0, because that's the largest possible insert index where the inserted element is truly smaller.
+# bisect_right returns index 3, because with "smaller or equal" the search advances through identical elements.
+# This behavior can be simplified to:
+
+# bisect_left would insert elements to the left of identical elements.
+# bisect_right would insert elements to the right of identical elements.
