@@ -45,4 +45,4 @@ class Solution:
                 yield from dfs(node.left)
                 yield from dfs(node.right)
 
-        return list(dfs(root1)) == list(dfs(root2))
+        return list(dfs(root1)) == list(dfs(root2))k
