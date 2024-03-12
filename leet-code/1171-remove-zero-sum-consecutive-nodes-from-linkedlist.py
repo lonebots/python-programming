@@ -39,9 +39,8 @@ Constraints:
 #         self.next = next
 class Solution:
     def removeZeroSumSublists(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        front = ListNode()
+        start = front = ListNode()
         front.next = head
-        start = front
 
         while start : 
             end = start.next 
